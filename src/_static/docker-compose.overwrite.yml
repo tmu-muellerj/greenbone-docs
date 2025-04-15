@@ -1,0 +1,53 @@
+services:
+  vulnerability-tests:
+    container_name: vulnerability-tests
+
+  notus-data:
+    container_name: notus-data
+
+  scap-data:
+    container_name: scap-data
+
+  cert-bund-data:
+    container_name: cert-bund-data
+
+  dfn-cert-data:
+    container_name: dfn-cert-data
+
+  data-objects:
+    container_name: data-objects
+
+  report-formats:
+    container_name: report-formats
+
+  gpg-data:
+    container_name: gpg-data
+
+  redis-server:
+    container_name: redis-server
+
+  pg-gvm:
+    container_name: pg-gvm
+
+  gvmd:
+    container_name: gvmd
+
+  gsa:
+    container_name: gsa
+    ports:
+      - 9392:443
+
+  configure-openvas:
+    container_name: configure-openvas
+
+  openvas:
+    container_name: openvas
+
+  openvasd:
+    container_name: openvasd
+
+  ospd-openvas:
+    container_name: ospd-openvas
+
+  gvm-tools:
+    container_name: gvm-tools
