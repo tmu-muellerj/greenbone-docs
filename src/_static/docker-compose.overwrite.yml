@@ -34,7 +34,7 @@ services:
 
   gsa:
     container_name: gsa
-    ports:
+    ports: !override
       - 9392:443
 
   configure-openvas:
