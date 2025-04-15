@@ -34,8 +34,12 @@ services:
 
   gsa:
     container_name: gsa
+    environment:
+      - GSAD_ARGS=--no-redirect --http-sts --gnutls-priorities=SECURE256:-VERS-TLS-ALL:+VERS-TLS1.2:+VERS-TLS1.3
     ports: !override
       - 9392:443
+    volumes:
+      - gsa_CA:/var/lib/gvm/private/CA
 
   configure-openvas:
     container_name: configure-openvas
@@ -51,3 +55,7 @@ services:
 
   gvm-tools:
     container_name: gvm-tools
+
+volumes:
+  gsa_CA:
+    external: true
