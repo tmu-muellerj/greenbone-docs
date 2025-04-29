@@ -39,7 +39,7 @@ services:
     ports: !override
       - 9392:443
     volumes:
-      - gsa_CA:/var/lib/gvm/private/CA
+      - gvm:/var/lib/gvm
 
   configure-openvas:
     container_name: configure-openvas
