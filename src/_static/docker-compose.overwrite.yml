@@ -57,5 +57,5 @@ services:
     container_name: gvm-tools
 
 volumes:
-  gsa_CA:
+  gvm:
     external: true
