@@ -1,9 +1,10 @@
+# https://greenbone.github.io/docs/latest/22.4/container/workflows.html#setting-up-ssl-tls-for-gsa
 services:
   gsa:
    environment:
      - GSAD_ARGS=--no-redirect --http-sts --gnutls-priorities=SECURE256:-VERS-TLS-ALL:+VERS-TLS1.2:+VERS-TLS1.3
    ports:
-     - 443:443
+     - 9293:443
    volumes:
      - myCertificates:/var/lib/gvm/
 
