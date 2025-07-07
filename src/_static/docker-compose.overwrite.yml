@@ -4,7 +4,7 @@ services:
    environment:
      - GSAD_ARGS=--no-redirect --http-sts --gnutls-priorities=SECURE256:-VERS-TLS-ALL:+VERS-TLS1.2:+VERS-TLS1.3
    ports: !override
-     - 443:9392
+     - 9392:443
    volumes:
      - myCertificates:/var/lib/gvm/
 
