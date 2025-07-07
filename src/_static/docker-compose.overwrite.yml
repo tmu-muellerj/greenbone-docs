@@ -3,8 +3,8 @@ services:
   gsa:
    environment:
      - GSAD_ARGS=--no-redirect --http-sts --gnutls-priorities=SECURE256:-VERS-TLS-ALL:+VERS-TLS1.2:+VERS-TLS1.3
-   ports:
-     - 9392:443
+   ports: !override
+     - 9392:9392
    volumes:
      - myCertificates:/var/lib/gvm/
 
